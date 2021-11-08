@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{%url 'index'%}" method="GET">
+<input type="text" name="number" placeholder="input number">
+<select name="type">
+  <option value="R">Reamur</option>
+  <option value="F">Fahrenheit</option>
+  <option value="C">Celsius</option>
+  <option value="K">Kelvin</option>
+</select>
+
+
+<br>
+<!-- <input type="checkbox" name="F" >Fahrenheit
+      <br>
+      <input type="checkbox" name="R" >Reamur
+            <br>
+            <input type="checkbox" name="C" >Celsius
+                  <br>
+                  <input type="checkbox" name="K" >Kelvin
+                        <br> -->
+
+
+                        <input type="checkbox" name="result_type" value="F" >Fahrenheit
+                              <br>
+                              <input type="checkbox" name="result_type" value="R">Reamur
+                                    <br>
+                                    <input type="checkbox" name="result_type" value="C">Celsius
+                                          <br>
+                                          <input type="checkbox" name="result_type" value="K">Kelvin
+                                                <br>
+      <input type="submit"  value="Ok">
+    </form>
+
+{%if number%}
+<p>{{initial}} {{type}} equals to {{number}} {{result_type}}</p>
+{%endif%}
+  </body>
+</html>
